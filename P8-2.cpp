@@ -15,11 +15,21 @@ using namespace std;
 int countWords(string str);
 
 int main(void)
-{
-
+{	
+	cout << "Word count: " << countWords("test hi what");
 }
 
 int countWords(string str)
 {
+	int wordTotal = 1;
+	char currentChar;
 
+	for (int i = 0; i < str.length(); i++)
+	{
+		currentChar = str[i];
+		if (currentChar == ' ' && str[i + 1] != ' ')
+			wordTotal++;
+	}
+
+	return(wordTotal);
 }
