@@ -15,8 +15,20 @@ using namespace std;
 int countWords(string str);
 
 int main(void)
-{	
-	cout << "Word count: " << countWords("test hi what");
+{
+	//variables
+	string input;
+
+	while (true)
+	{
+		cout << "Enter a string or Q to quit: ";
+		getline(cin, input);
+
+		if (input == "Q")
+			break;
+
+		cout << "Word count: " << countWords(input) << endl;
+	}
 }
 
 int countWords(string str)
